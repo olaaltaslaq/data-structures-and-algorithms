@@ -23,6 +23,11 @@ function lower(str) {
 
 const updateAnimal = (arr, callback) => {
   // Solution code here...
+  let newArr = [];
+  arr.forEach((value) => {
+      newArr.push(callback(value));
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -58,7 +63,10 @@ HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  // Solution code here...
+  arr.sort((a, b) => {
+    return b - a;
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -73,7 +81,9 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 
 const alphabetize = (arr) => {
   // Solution code here...
+  return arr.sort((a, b) => a < b ? -1 : 1);
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
