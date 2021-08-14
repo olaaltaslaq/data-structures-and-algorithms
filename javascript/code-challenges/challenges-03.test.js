@@ -8,6 +8,12 @@ Write a function called addTwo that takes in an array and adds two to every valu
 
 const addTwo = (arr) => {
   // Solution code here...
+  let Array = [];
+  for (let i = 0; i < arr.length; i++) {
+      Array.push(arr[i] + 2);
+
+  }
+  return Array;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,6 +38,12 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 
 const containsAnd = (arr) => {
   // Solution code here...
+  let newArr = arr.filter((value) => {
+      if (value.includes("and")) {
+          return value;
+      }
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,7 +55,12 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  // Solution code here...
+  let newarr=arr.filter(item=>{
+    if(item % 2 !==0){
+      return true;
+    }
+  });
+  return newarr;
 };
 
 /* ------------------------------------------------------------------------------------------------
