@@ -23,7 +23,12 @@ Write a function named addValues that, given an array of numbers as input, uses 
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr) => {
-  // Solution code here...
+  let valuesAcc = arr.reduce((acc, val, idx) => {
+      acc = acc + val;
+      return acc;
+
+  }, 0);
+  return valuesAcc;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -50,9 +55,15 @@ Write a function named countNumberOfElements that, given an array as input, uses
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
+
 const countNumberOfElements = (arr) => {
   // Solution code here...
+  let numberOfItem = arr.reduce((acc) => {
+      return acc + 1;
+  }, 0);
+  return numberOfItem;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
