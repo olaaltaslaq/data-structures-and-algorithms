@@ -30,6 +30,15 @@ return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   // Solution code here...
+  let result=0;
+  for(let i=0; i<matrix.length;i++){
+    for(let j=0; j<matrix[i].length;j++){
+      if(matrix[i][j]>result){
+        result=matrix[i][j];
+      }
+    }
+  }
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -48,6 +57,13 @@ return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   // Solution code here...
+  let result=0;
+  for(let i=0; i<matrix.length;i++){
+    for(let j=0; j<matrix[i].length;j++){
+        result=matrix[i][j]+ result;
+    }
+  }
+  return result;
 };
 
 
