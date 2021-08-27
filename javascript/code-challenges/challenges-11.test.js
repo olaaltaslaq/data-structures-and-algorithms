@@ -34,6 +34,15 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   // Solution code here...
+  let counter=0;
+  input.map(item1=>{
+    item1.map(item2=>{
+      if(target===item2){
+        counter=counter+1;
+      }
+    });
+  });
+  return counter;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -137,6 +146,12 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  let string=[];
+  data.filter(item=>{
+    if(item.gender=='male' || item.gender=='female' )
+     return (string.push(item.name));
+  });
+  return string.join(' and ');
 };
 
 /* ------------------------------------------------------------------------------------------------
